@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Station | Storage</title>
+</head>
+<body>
+    <div class="container">
+
+        {% if message %}
+        <p class="message">{{ message | safe }}</p>
+        {% endif %}
+
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="unit">Наименование</label>
+                <input type="text" name="unit">
+            </div>
+            <div class="form-group">
+                <label for="quantity">Количество</label>
+                <input type="number" name="quantity">
+            </div>
+            <div class="form-group">
+                <h3>Действие</h3>
+                <input type="radio" name="action" value="remove" checked>Взять
+                <input type="radio" name="action" value="add">Добавить
+            </div>
+            <input type="submit" value="Применить" class="btn" name="add">
+        </form>
+    </div>
+</body>
+</html>
