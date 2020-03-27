@@ -11,6 +11,8 @@ gspread = "*"
 oauth2client = "*"
 flask = "*"
 pprint = "*"
+render-template = "*"
+request = "*"
 
 [requires]
 python_version = "3.8"

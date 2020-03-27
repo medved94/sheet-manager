@@ -12,6 +12,8 @@ scope = ['https://www.googleapis.com/auth/analytics',
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 client = gspread.authorize(creds)
 
+# Render pages
+
 @app.route('/')
 def index():
         return render_template('index.html')
